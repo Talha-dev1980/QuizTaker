@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">GameApp</string>
+    <string name="food">Food</string>
+    <string name="places">Places</string>
+    <string name="gk">General Information</string>
+    <string name="logout">Logout</string>
+    <string name="quizes">Quizes</string>
+    <string name="login">Login</string>
+    <string name="loginAccount">Login to your account</string>
+    <string name="email">email</string>
+    <string name="pass">Password</string>
+    <string name="signup">Sign up</string>
+    <string name="result">Result</string>
+    <string name="name">Name</string>
+    <string name="confirmPass">Confirm Password</string>
+    <string name="haveAcc">Already have an account?</string>
+    <string name="notHaveAcc">Do not have an account?</string>
+    <string name="testKnowledge">Test your knowledge</string>
+</resources>

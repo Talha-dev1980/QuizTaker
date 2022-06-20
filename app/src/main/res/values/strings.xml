@@ -16,4 +16,5 @@
     <string name="haveAcc">Already have an account?</string>
     <string name="notHaveAcc">Do not have an account?</string>
     <string name="testKnowledge">Test your knowledge</string>
+    <string name="invalidEmail">Invalid email</string>
 </resources>

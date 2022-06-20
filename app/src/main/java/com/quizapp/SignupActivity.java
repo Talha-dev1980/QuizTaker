@@ -12,8 +12,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProviders;
 
 import com.quizapp.Class.SQLiteHelper;
+import com.quizapp.Models.RegisterResponse;
+import com.quizapp.Utils.AppLogger;
+import com.quizapp.ViewModels.JoinCompleteViewModel;
 import com.quizapp.databinding.ActivitySignupBinding;
 
 public class SignupActivity extends AppCompatActivity {
@@ -31,6 +36,7 @@ public class SignupActivity extends AppCompatActivity {
     Cursor cursor;
     String F_Result = "Not_Found";
     String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+    JoinCompleteViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +44,7 @@ public class SignupActivity extends AppCompatActivity {
         binding = ActivitySignupBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         sqLiteHelper = new SQLiteHelper(this);
-
+        viewModel = ViewModelProviders.of(this).get(JoinCompleteViewModel.class);
 
         binding.alreagyAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,8 +77,39 @@ public class SignupActivity extends AppCompatActivity {
                 EmptyEditTextAfterDataInsert();
             }
         });
+        viewModel.getLiveRegResponse().observe(this, new Observer<RegisterResponse>() {
+            @Override
+            public void onChanged(RegisterResponse registerResponse) {
+                if (registerResponse != null) {
 
-        binding.passwordShowHideImageView.setOnClickListener(new View.OnClickListener() {
+                    AppLogger.log("API Call-getResponseObserver", registerResponse.isError() + "");
+                } else {
+
+                    AppLogger.log("API Call-getResponse", "in observer");
+                }
+
+            }
+        });
+
+       /* binding.signupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = binding.emailEditText.getText().toString().trim();
+                if (binding.passwordEditText.getText().length() > 0) {
+                    String pass = binding.passwordEditText.getText().toString().trim();
+                    RegisterModel model = new RegisterModel();
+                    model.setEmail(email);
+                    model.setPassword(pass);
+                    model.setRole("User");
+                    viewModel.startRegisterUser(model);
+                    Intent intent = new Intent(SignupActivity.this, MainActivity.class);
+                    // startActivity(intent);
+                } else {
+                    binding.passwordEditText.setError(getResources().getString(R.string.invalidEmail));
+                }
+            }
+        });
+       */ binding.passwordShowHideImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (binding.passwordEditText.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())) {
@@ -125,13 +162,12 @@ public class SignupActivity extends AppCompatActivity {
 // Printing toast message if any of EditText is empty.
             Toast.makeText(SignupActivity.this, "Please Fill All The Required Fields.", Toast.LENGTH_LONG).show();
 
-        } else if (PasswordMatches==false){
+        } else if (PasswordMatches == false) {
             Toast.makeText(SignupActivity.this, "Password does not matches.", Toast.LENGTH_LONG).show();
 
-        }else if (EmailPattren==false){
+        } else if (EmailPattren == false) {
             Toast.makeText(SignupActivity.this, "Please Enter Valid Email.", Toast.LENGTH_LONG).show();
-        }
-        else {
+        } else {
 
 
             // SQLite query to insert data into table.
@@ -148,7 +184,7 @@ public class SignupActivity extends AppCompatActivity {
             Toast.makeText(SignupActivity.this, "User Registered Successfully", Toast.LENGTH_LONG).show();
 
 
-            startActivity(new Intent(SignupActivity.this,CategoryActivity.class));
+            startActivity(new Intent(SignupActivity.this, CategoryActivity.class));
             finish();
 
         }

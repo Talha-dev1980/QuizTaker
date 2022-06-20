@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.backblaze.b2:b2-sdk-core:5.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.backblaze.b2/b2-sdk-core/5.0.0/bd972c5050ec97b60092bf03c1b43330e70f79cc/b2-sdk-core-5.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.backblaze.b2/b2-sdk-core/5.0.0/157e89a7edea40ee08d4902426520a21c57ec172/b2-sdk-core-5.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.backblaze.b2/b2-sdk-core/5.0.0/e5abcbab14f38514ccf2b0f55ad5da12b2ad9cfb/b2-sdk-core-5.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

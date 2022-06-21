@@ -1,4 +1,4 @@
-package com.quizapp.Utils;
+package com.quiztaker.Utils;
 
 public interface Constants {
     String URL = "urlWebView";

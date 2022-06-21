@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GameApp</string>
+    <string name="app_name">Quiz Taker</string>
     <string name="food">Food</string>
     <string name="places">Places</string>
     <string name="gk">General Information</string>
@@ -17,4 +17,5 @@
     <string name="notHaveAcc">Do not have an account?</string>
     <string name="testKnowledge">Test your knowledge</string>
     <string name="invalidEmail">Invalid email</string>
+    <string name="question">Emiratis eat this plate on breakfast, the plate\'s name is:</string>
 </resources>

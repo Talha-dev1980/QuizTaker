@@ -1,4 +1,4 @@
-package com.quizapp.Class;
+package com.quiztaker.Class;
 
 public class QuestionModel {
     String question,answer,type;

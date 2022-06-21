@@ -1,4 +1,4 @@
-package com.quizapp;
+package com.quiztaker.Views;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -10,8 +10,9 @@ import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.quizapp.Class.QuestionModel;
-import com.quizapp.databinding.ActivityQuestionBinding;
+import com.quiztaker.Class.QuestionModel;
+import com.quiztaker.R;
+import com.quiztaker.databinding.ActivityQuestionBinding;
 
 import java.util.ArrayList;
 

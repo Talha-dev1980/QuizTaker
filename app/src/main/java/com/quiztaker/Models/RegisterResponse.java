@@ -1,4 +1,4 @@
-package com.quizapp.Models;
+package com.quiztaker.Models;
 
 public class RegisterResponse {
     boolean error;

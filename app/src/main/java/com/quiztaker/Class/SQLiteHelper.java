@@ -1,4 +1,4 @@
-package com.quizapp.Class;
+package com.quiztaker.Class;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteOpenHelper;

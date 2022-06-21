@@ -1,4 +1,4 @@
-package com.quizapp;
+package com.quiztaker.Views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.quiztaker.R;
 
 public class Splash extends AppCompatActivity {
 
@@ -18,7 +20,7 @@ public class Splash extends AppCompatActivity {
 
         user = getSharedPreferences("Quiz_ref", MODE_PRIVATE).getString("user", "");
 
-        Log.e("getSharedPreferences",""+user);
+        Log.e("getSharedPreferences", "" + user);
 
         new Handler().postDelayed(new Runnable() {
             @Override

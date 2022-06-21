@@ -1,9 +1,9 @@
-package com.quizapp.Utils;
+package com.quiztaker.Utils;
 
 import android.content.Context;
 import android.util.Log;
 
-import com.quizapp.BuildConfig;
+import com.quiztaker.BuildConfig;
 
 
 public class AppLogger {

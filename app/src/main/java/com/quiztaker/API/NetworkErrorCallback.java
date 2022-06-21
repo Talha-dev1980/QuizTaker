@@ -1,4 +1,4 @@
-package com.quizapp.API;
+package com.quiztaker.API;
 
 public interface NetworkErrorCallback {
     void onError(NetworkError error);

@@ -1,4 +1,4 @@
-package com.quizapp;
+package com.quiztaker.Views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,11 +15,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.quizapp.Class.SQLiteHelper;
-import com.quizapp.Models.RegisterResponse;
-import com.quizapp.Utils.AppLogger;
-import com.quizapp.ViewModels.JoinCompleteViewModel;
-import com.quizapp.databinding.ActivitySignupBinding;
+import com.quiztaker.Class.SQLiteHelper;
+import com.quiztaker.Models.RegisterResponse;
+import com.quiztaker.R;
+import com.quiztaker.Utils.AppLogger;
+import com.quiztaker.ViewModels.JoinCompleteViewModel;
+import com.quiztaker.databinding.ActivitySignupBinding;
 
 public class SignupActivity extends AppCompatActivity {
 
@@ -109,7 +110,8 @@ public class SignupActivity extends AppCompatActivity {
                 }
             }
         });
-       */ binding.passwordShowHideImageView.setOnClickListener(new View.OnClickListener() {
+       */
+        binding.passwordShowHideImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (binding.passwordEditText.getTransformationMethod().equals(PasswordTransformationMethod.getInstance())) {

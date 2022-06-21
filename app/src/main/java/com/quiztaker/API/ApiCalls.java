@@ -1,13 +1,12 @@
-package com.quizapp.API;
+package com.quiztaker.API;
 
-import com.quizapp.Models.RegisterModel;
-import com.quizapp.Models.RegisterResponse;
+import com.quiztaker.Models.RegisterModel;
+import com.quiztaker.Models.RegisterResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.PUT;
 
 public interface ApiCalls {
     @Headers({"x-project: dGVtcGxlb2ZmaXQ6ZGVm", "accept: application/json", "Content-Type: application/json"})

@@ -1,4 +1,4 @@
-package com.quizapp;
+package com.quiztaker.Views;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,20 +7,18 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.quizapp.Class.QuestionModel;
-import com.quizapp.databinding.ActivityCategoryBinding;
+import com.quiztaker.Class.QuestionModel;
+import com.quiztaker.R;
+import com.quiztaker.databinding.ActivityCategoryBinding;
 
 import java.util.ArrayList;
 
 public class CategoryActivity extends AppCompatActivity {
 
-    ActivityCategoryBinding binding;
-
-
     public static ArrayList<QuestionModel> foodQuestionList = new ArrayList<>();
     public static ArrayList<QuestionModel> placesQuestionList = new ArrayList<>();
     public static ArrayList<QuestionModel> gInfoQuestionList = new ArrayList<>();
-
+    ActivityCategoryBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,17 +76,17 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(CategoryActivity.this, QuestionActivity.class)
-                .putExtra("question","food"));
+                        .putExtra("question", "food"));
             }
         });
         binding.placesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (ResultsActivity.food){
+                if (ResultsActivity.food) {
                     startActivity(new Intent(CategoryActivity.this, QuestionActivity.class)
-                            .putExtra("question","place"));
-                }else {
+                            .putExtra("question", "place"));
+                } else {
                     Toast.makeText(CategoryActivity.this, "Please attempt food question first", Toast.LENGTH_SHORT).show();
                 }
 
@@ -98,11 +96,10 @@ public class CategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if (ResultsActivity.place){
+                if (ResultsActivity.place) {
                     startActivity(new Intent(CategoryActivity.this, QuestionActivity.class)
-                            .putExtra("question","gInfo"));
-                }
-                else {
+                            .putExtra("question", "gInfo"));
+                } else {
                     Toast.makeText(CategoryActivity.this, "Please attempt places question first", Toast.LENGTH_SHORT).show();
 
                 }

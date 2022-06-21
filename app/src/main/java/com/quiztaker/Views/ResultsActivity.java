@@ -1,4 +1,4 @@
-package com.quizapp;
+package com.quiztaker.Views;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -6,19 +6,18 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.quizapp.databinding.ActivityResultsBinding;
+import com.quiztaker.R;
+import com.quiztaker.databinding.ActivityResultsBinding;
 
 public class ResultsActivity extends AppCompatActivity {
 
-    ActivityResultsBinding binding;
-
     public static boolean food;
     public static boolean place;
+    static int f = 0;
+    static int p = 0;
+    ActivityResultsBinding binding;
     int correctAns = 0;
-
-    static int f=0;
-    static  int p=0;
-     int total = 0;
+    int total = 0;
 
 
     @Override
@@ -47,11 +46,10 @@ public class ResultsActivity extends AppCompatActivity {
                 Log.e("correctAns", "" + correctAns);
             }
             food = true;
-            f=correctAns;
+            f = correctAns;
             binding.resultText.setText("Your Score is " + correctAns + " out of 10");
 
-        }
-        else if (getIntent().getStringExtra("question").equals("place")) {
+        } else if (getIntent().getStringExtra("question").equals("place")) {
             for (int i = 0; i < CategoryActivity.placesQuestionList.size(); i++) {
 
                 Log.e("correctAns", "useranswer: " + CategoryActivity.placesQuestionList.get(i).getAnswer()
@@ -63,10 +61,9 @@ public class ResultsActivity extends AppCompatActivity {
                 Log.e("correctAns", "" + correctAns);
             }
             place = true;
-            p=correctAns;
+            p = correctAns;
             binding.resultText.setText("Your Score is " + correctAns + " out of 12");
-        }
-        else {
+        } else {
             for (int i = 0; i < CategoryActivity.gInfoQuestionList.size(); i++) {
                 Log.e("correctAns", "useranswer: " + CategoryActivity.gInfoQuestionList.get(i).getAnswer()
                         .equals(CategoryActivity.gInfoQuestionList.get(i).getUserAns()));
@@ -75,15 +72,13 @@ public class ResultsActivity extends AppCompatActivity {
                     correctAns++;
                 }
                 Log.e("correctAns", "" + correctAns);
-                total=f+p+correctAns;
+                total = f + p + correctAns;
                 binding.resultText.setText("Your Score is " + total + " out of 32");
-                food=false;
-                place=false;
+                food = false;
+                place = false;
             }
 
         }
-
-
 
 
     }

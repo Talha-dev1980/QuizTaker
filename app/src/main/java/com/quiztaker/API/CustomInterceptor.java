@@ -1,4 +1,4 @@
-package com.quizapp.API;
+package com.quiztaker.API;
 
 import java.io.IOException;
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".QuestionActivity">
+    tools:context=".Views.QuestionActivity">
 
     <TextView
         android:id="@+id/headerText"
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:gravity="center"
-        android:text="Emiratis eat this plate on breakfast, the plate's name is:"
+        android:text="@string/question"
         android:textColor="@color/black"
         android:textSize="@dimen/_16sdp"
         app:layout_constraintBottom_toBottomOf="@+id/map"
@@ -131,7 +131,7 @@
         android:layout_marginStart="@dimen/_8sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/qImageView"
         app:layout_constraintVertical_bias="0.1"
@@ -161,15 +161,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/check_circle"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
         app:layout_constraintHeight_percent="0.08"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/nextImageView"
         app:layout_constraintTop_toBottomOf="@id/qImageView"
         app:layout_constraintVertical_bias="0.1"
         app:layout_constraintWidth_percent="0.15"
-        app:layout_constraintHorizontal_bias="1"
         app:tint="@color/colorPrimary" />
 
     <TextView

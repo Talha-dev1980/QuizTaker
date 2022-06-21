@@ -1,13 +1,13 @@
-package com.quizapp.ViewModels;
+package com.quiztaker.ViewModels;
 
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.quizapp.API.ApiCalls;
-import com.quizapp.API.RetrofitClient;
-import com.quizapp.Models.RegisterModel;
-import com.quizapp.Models.RegisterResponse;
-import com.quizapp.Utils.AppLogger;
+import com.quiztaker.API.ApiCalls;
+import com.quiztaker.API.RetrofitClient;
+import com.quiztaker.Models.RegisterModel;
+import com.quiztaker.Models.RegisterResponse;
+import com.quiztaker.Utils.AppLogger;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,8 +22,8 @@ public class JoinCompleteViewModel extends ViewModel {
 
     public void startRegisterUser(RegisterModel model) {
         ApiCalls apiCalls = RetrofitClient.getApiCalls();
-       // apiCalls.registerUser("dGVtcGxlb2ZmaXQ6ZGVm", model).enqueue(new Callback<RegisterResponse>() {
-        apiCalls.registerUser( model).enqueue(new Callback<RegisterResponse>() {
+        // apiCalls.registerUser("dGVtcGxlb2ZmaXQ6ZGVm", model).enqueue(new Callback<RegisterResponse>() {
+        apiCalls.registerUser(model).enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
                 if (response.isSuccessful()) {

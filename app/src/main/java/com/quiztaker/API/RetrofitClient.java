@@ -1,7 +1,8 @@
-package com.quizapp.API;
+package com.quiztaker.API;
 
 
-import com.quizapp.BuildConfig;
+
+import com.quiztaker.BuildConfig;
 
 import java.security.KeyStore;
 import java.security.KeyStoreException;
